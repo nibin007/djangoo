@@ -1,0 +1,21 @@
+
+ {%extends 'home.html'%} 
+ {%block content%}
+    <table class="table table-dark">
+    <form action="post">
+     {% csrf_token %}
+        {{mfor.as_table}}
+        <tr><td colspan="2" class="text-center">
+            <button class="btn btn-success" type="submit">Add</button>
+        </td> </tr>
+    </form>
+    </table>    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+  <script>
+      $('#id_name').attr('class','form-control')
+      $('#id_price').attr('class','form-control')
+      $('#id_author').attr('class','form-control')
+  </script>
+{%endblock content%}

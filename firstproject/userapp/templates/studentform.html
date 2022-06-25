@@ -1,0 +1,12 @@
+    {%extends 'home.html'%}
+       {%block index%}
+        <p>django</p>
+    <table>  {{formview.as_table}}</table>
+   {%for i in listvar%} 
+   <p>{{i}}</p>
+   {%endfor%}
+   {%if 'apple' in listvar%} 
+   <h4>apple is in the list</h4>
+   {%endif%}    
+  
+ {%endblock index%}

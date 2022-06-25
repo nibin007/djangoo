@@ -1,0 +1,29 @@
+{%extends 'home.html' %}
+{%block content%}
+<table class="table table-bordered table-dark">
+<thead>
+    <h3>{{user}}</h3>
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>phone</th>
+        <th>email</th>
+        <th>address</th>
+
+    </tr>
+</thead>
+<tbody>
+    {%for i in data%}
+    <tr>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.address}}</td>
+        <td><a class="btn btn-danger" href="{%url 'delet' i.id%}">delete</a></td>
+        <td><a class="btn btn-primary" href="{%url 'updat' i.id%}">update</a></td>
+    </tr>
+    {%endfor%}
+</tbody>
+</table>
+{%endblock content%}

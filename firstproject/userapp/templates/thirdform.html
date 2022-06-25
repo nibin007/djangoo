@@ -1,0 +1,12 @@
+{%extends 'home.html'%} 
+{%block content%} 
+<form method="post" class="text-center" >
+    {% csrf_token %}
+    <input class="form-control" placeholder="name" name="name" type="text">
+    <input class="form-control" name="phone"  type="number" placeholder="phone">
+    <input type="text" name="address" class="form-control" placeholder="address">
+    <input type="number" name="age" class="form-control" placeholder="age">
+    <input type="email" name="email" class="form-control" placeholder="email">
+    <button type="submit" class="btn btn-success">submit</button>
+</form>
+{%endblock content%} 
